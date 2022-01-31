@@ -1,0 +1,29 @@
+System.setProperty("user.dir", projectDir.toString())
+
+buildscript {
+    repositories {
+        mavenLocal()
+        mavenCentral()
+        maven {
+            url "https://plugins.gradle.org/m2/"
+        }
+
+    }
+}
+
+apply plugin: 'java'
+
+
+group 'blankfactor.test'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+    mavenLocal()
+
+}
+
+dependencies{
+    testImplementation 'junit:junit:4.13.2'
+    implementation 'org.seleniumhq.selenium:selenium-java:4.1.1'
+}
